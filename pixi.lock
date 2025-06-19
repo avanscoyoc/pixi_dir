@@ -1941,7 +1941,7 @@ packages:
 - pypi: .
   name: pixi-dir
   version: 0.1.0
-  sha256: 657a3c05b07f893fe7d882afa02b5518d332804d31bd4b0b36b370cc2a2463d9
+  sha256: b870ac79097ad2f47f05a835f7f0b4237c52ddd9802125d2fc55cb20286c8754
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/pixi-kernel-0.6.3-pyh80e38bb_0.conda
