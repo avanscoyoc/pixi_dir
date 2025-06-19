@@ -1,0 +1,25 @@
+{
+  "name": "pixi_dir",
+  "build": {
+    "dockerfile": "Dockerfile",       // relative to .devcontainer/
+    "context": ".."                   // project root is one level above .devcontainer
+  },
+  "workspaceFolder": "/repo",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/repo,type=bind,consistency=cached"
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "git.path": "/usr/bin/git",
+        "python.pythonPath": "/repo/.pixi/envs/default/bin/python"
+      }
+    }
+  },
+  "postCreateCommand": "/usr/local/bin/pixi install",
+  "remoteUser": "root"
+}
+
+
+
+

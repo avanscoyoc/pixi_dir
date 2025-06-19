@@ -2,13 +2,18 @@ FROM ghcr.io/prefix-dev/pixi:latest
 
 WORKDIR /repo
 
-COPY pixi.lock /repo/pixi.lock
+RUN apt-get update && apt-get install -y git
+
 COPY pyproject.toml /repo/pyproject.toml
+COPY pixi.lock /repo/pixi.lock
 
 RUN /usr/local/bin/pixi install --manifest-path pyproject.toml
 
-COPY entrypoint.sh /repo/entrypoint.sh
+COPY .devcontainer/entrypoint.sh /repo/entrypoint.sh
 RUN chmod 700 /repo/entrypoint.sh
 
-ENTRYPOINT [ "/repo/entrypoint.sh" ]
+ENTRYPOINT ["/repo/entrypoint.sh"]
+
+
+
 
