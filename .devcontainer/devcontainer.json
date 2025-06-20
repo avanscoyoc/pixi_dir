@@ -1,8 +1,8 @@
 {
   "name": "pixi_dir",
   "build": {
-    "dockerfile": "Dockerfile",       // relative to .devcontainer/
-    "context": ".."                   // project root is one level above .devcontainer
+    "dockerfile": "Dockerfile",      
+    "context": ".."                  
   },
   "workspaceFolder": "/repo",
   "mounts": [
